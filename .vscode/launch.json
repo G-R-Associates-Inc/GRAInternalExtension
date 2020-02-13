@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "GRA-04",
+            "server": "http://localhost:8088",
+            "serverInstance": "BC150",
+            "authentication": "Windows",
+            "startupObjectId": 143,
+            "port": 9049
+            //"schemaUpdateMode": "Recreate"
+        }
+    ]
+}
