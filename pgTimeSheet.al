@@ -2,6 +2,9 @@
 *   Documentation Section
 *       GRALE01 - 12/27/19 - Lina El Sadek, G.R. & Associates Inc.
 *               - Created page according to definition from NAV 2009.
+*
+*       GRALE02 - 05/13/20 - Lina El Sadek, G.R. & Associates Inc.
+*               - Added ApplicationArea to fields and actions so they are displayed on the page.
 */
 
 page 50100 Timesheet
