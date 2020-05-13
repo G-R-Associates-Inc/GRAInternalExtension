@@ -14,6 +14,7 @@ page 50100 Timesheet
     DataCaptionFields = "Journal Batch Name";
     PageType = List;
     UsageCategory = Lists;
+    ApplicationArea = Jobs;
 
     layout
     {
@@ -23,35 +24,39 @@ page 50100 Timesheet
             {
                 field(Submitted; Submitted)
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     Editable = false;
                 }
                 field(Approved; Approved)
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     Editable = false;
                 }
                 field("Posting Date"; "Posting Date")
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
 
                 }
 
                 field("Document Date"; "Document Date")
                 {
-
+                    ApplicationArea = Jobs; //GRALE02 - Add
                 }
 
                 field("Document No."; "Document No.")
                 {
-
+                    ApplicationArea = Jobs; //GRALE02 - Add
                 }
 
                 field("External Document No."; "External Document No.")
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     Visible = false;
                 }
 
                 field("Job No."; "Job No.")
                 {
-
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     trigger OnValidate();
                     begin
                         JobJnlManagement.GetNames(Rec, JobDescription, AccName);
@@ -61,11 +66,12 @@ page 50100 Timesheet
 
                 field("Job Task No."; "Job Task No.")
                 {
-
+                    ApplicationArea = Jobs; //GRALE02 - Add
                 }
 
                 field(Type; Type)
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     Visible = false;
 
                     trigger OnValidate();
@@ -76,6 +82,7 @@ page 50100 Timesheet
 
                 field("No."; "No.")
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     trigger OnValidate();
                     begin
                         JobJnlManagement.GetNames(Rec, JobDescription, AccName);
@@ -85,48 +92,57 @@ page 50100 Timesheet
 
                 field(Chargeable; Chargeable)
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     CaptionML = ENU = 'Billable', ESM = 'Facturable', FRC = 'Facturable', ENC = 'Chargeable';
                 }
 
                 field(Description; Description)
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
 
                 }
 
                 field("Unit of Measure Code"; "Unit of Measure Code")
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
 
                 }
 
                 field(Quantity; Quantity)
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
 
                 }
             }
 
             field(JobDescription; JobDescription)
             {
+                ApplicationArea = Jobs; //GRALE02 - Add
                 Editable = false;
             }
 
             field(JobTaskDescription; JobTaskDescription)
             {
+                ApplicationArea = Jobs; //GRALE02 - Add
                 Editable = false;
                 CaptionML = ENU = 'Account Name', ESM = 'Nombre cuenta', FRC = 'Nom du compte', ENC = 'Account Name';
             }
 
             field(TotalBillable; TotalBillable)
             {
+                ApplicationArea = Jobs; //GRALE02 - Add
                 Editable = false;
             }
 
             field(TotalNonBillable; TotalNonBillable)
             {
+                ApplicationArea = Jobs; //GRALE02 - Add
                 Editable = false;
             }
 
             field(TotalHours; TotalHours)
             {
+                ApplicationArea = Jobs; //GRALE02 - Add
                 Editable = false;
             }
         }
@@ -141,6 +157,7 @@ page 50100 Timesheet
                 Caption = 'Functions';
                 action("Retreive Timesheet History")
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     Caption = 'Retreive Timesheet History';
                     Image = PostedTimeSheet;
                     Promoted = true;
@@ -161,6 +178,7 @@ page 50100 Timesheet
 
                 action("Timesheet Summary")
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     Caption = 'Timesheet Summary';
                     Image = Timesheet;
                     Promoted = true;
@@ -181,6 +199,7 @@ page 50100 Timesheet
 
                 action("P&osting")
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     CaptionML = ENU = 'P&osting', ESM = 'Control', FRC = 'Rapprocher', ENC = 'Reconcile';
                     Visible = false;
 
@@ -192,6 +211,7 @@ page 50100 Timesheet
                 }
                 action("Test Report")
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     CaptionML = ENU = 'Test Report', ESM = 'Test', FRC = 'Tester le report', ENC = 'Test Report';
                     Visible = false;
 
@@ -204,6 +224,7 @@ page 50100 Timesheet
 
                 action("Submit Timesheet")
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     CaptionML = ENU = 'Submit Timesheet';
                     image = Post;
                     Promoted = true;
@@ -231,6 +252,7 @@ page 50100 Timesheet
 
                 action("Unsubmit Timesheet")
                 {
+                    ApplicationArea = Jobs; //GRALE02 - Add
                     CaptionML = ENU = 'Unsubmit Timesheet';
                     Image = Undo;
                     Promoted = true;
