@@ -16,7 +16,6 @@ page 50107 "Job Task Worksheet"
     PageType = List;
     PromotedActionCategories = 'New,Process,Report,Job Tasks,Functions';
 
-
     layout
     {
         area(Content)
@@ -25,7 +24,7 @@ page 50107 "Job Task Worksheet"
             {
                 TableRelation = Job;
                 Caption = 'Job No.';
-                //Editable = false;
+                ApplicationArea = All; //GRALE02 - Add
 
 
                 trigger OnValidate();
@@ -54,47 +53,49 @@ page 50107 "Job Task Worksheet"
 
             field(JobDescription; JobDescription)
             {
+                ApplicationArea = All; //GRALE02 - Add
                 Caption = 'Job Description';
             }
             repeater("Job Task List")
             {
                 field("Job No."; "Job No.")
                 {
+                    ApplicationArea = All; //GRALE02 - Add
                     Visible = false;
                 }
                 field("Job Task No."; "Job Task No.")
                 {
-
+                    ApplicationArea = All; //GRALE02 - Add
                 }
 
                 field(Description; Description)
                 {
-
+                    ApplicationArea = All; //GRALE02 - Add
                 }
 
                 field("Job Task Type"; "Job Task Type")
                 {
-
+                    ApplicationArea = All; //GRALE02 - Add
                 }
 
                 field("WIP-Total"; "WIP-Total")
                 {
-
+                    ApplicationArea = All; //GRALE02 - Add
                 }
 
                 field(Totaling; Totaling)
                 {
-
+                    ApplicationArea = All; //GRALE02 - Add
                 }
 
                 field("Job Posting Group"; "Job Posting Group")
                 {
-
+                    ApplicationArea = All; //GRALE02 - Add
                 }
 
                 field(Chargeable; Chargeable)
                 {
-
+                    ApplicationArea = All; //GRALE02 - Add
                 }
             }
         }

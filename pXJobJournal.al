@@ -2,6 +2,9 @@
 *   Documentation Section
 *       GRALE01 - 12/24/19 - Lina El Sadek, G.R. & Associates Inc.
 *               - Created pageextension.
+*
+*       GRALE02 - 05/13/20 - Lina El Sadek, G.R. & Associates Inc.
+*               - Added ApplicationArea property to fields and actions
 */
 pageextension 50105 pXJobJournal extends "Job Journal"
 {
@@ -13,7 +16,7 @@ pageextension 50105 pXJobJournal extends "Job Journal"
             {
                 CaptionML = ENU = 'Submit Timesheet';
                 image = Post;
-                //Promoted = true;
+                ApplicationArea = All; //GRALE02 - Add
 
                 trigger OnAction();
                 var
@@ -40,7 +43,7 @@ pageextension 50105 pXJobJournal extends "Job Journal"
             {
                 CaptionML = ENU = 'Unsubmit Timesheet';
                 Image = Undo;
-                //Promoted = true;
+                ApplicationArea = All; //GRALE02 - Add
 
                 trigger OnAction();
                 var
@@ -73,6 +76,7 @@ pageextension 50105 pXJobJournal extends "Job Journal"
             {
                 Caption = 'Approve Timesheet';
                 Image = Approve;
+                ApplicationArea = All; //GRALE02 - Add
 
                 trigger OnAction();
                 var
@@ -109,8 +113,7 @@ pageextension 50105 pXJobJournal extends "Job Journal"
             {
                 Caption = 'Retreive Timesheet History';
                 Image = PostedTimeSheet;
-                //Promoted = true;
-                //PromotedCategory = ;
+                ApplicationArea = All; //GRALE02 - Add
 
                 trigger OnAction();
                 var
@@ -127,7 +130,7 @@ pageextension 50105 pXJobJournal extends "Job Journal"
             {
                 Caption = 'Timesheet Summary';
                 Image = Timesheet;
-                //Promoted = true;
+                ApplicationArea = All; //GRALE02 - Add
 
                 trigger OnAction();
                 var

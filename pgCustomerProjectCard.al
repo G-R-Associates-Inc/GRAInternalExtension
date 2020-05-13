@@ -2,6 +2,9 @@
 *   Documentation Section
 *       GRALE01 - 12/27/19 - Lina El Sadek, G.R. & Associates Inc.
 *               - Created page according to definition from NAV 2009.
+*
+*       GRALE02 - 05/13/20 - Lina El Sadek, G.R. & Associates Inc.
+*               - Added ApplicationArea property to fields and actions
 */
 
 page 50104 "Customer Project Card"
@@ -15,20 +18,22 @@ page 50104 "Customer Project Card"
         {
             field("No."; "No.")
             {
-
+                ApplicationArea = All; //GRALE02 - Add
             }
             field(Name; Name)
             {
-
+                ApplicationArea = All; //GRALE02 - Add
             }
 
             part(ReleaseVersionSubform; "Release Version Subform")
             {
+                ApplicationArea = All; //GRALE02 - Add
                 SubPageLink = "Customer No." = field("No.");
             }
 
             part(CustomerLoginsSubform; "Customer Logins Subform")
             {
+                ApplicationArea = All; //GRALE02 - Add
                 SubPageLink = "Customer No." = field("No.");
             }
         }
@@ -47,6 +52,7 @@ page 50104 "Customer Project Card"
                 Promoted = true;
                 PromotedCategory = Category4;
                 PromotedIsBig = true;
+                ApplicationArea = All; //GRALE02 - Add
 
                 trigger OnAction();
                 var
@@ -69,6 +75,7 @@ page 50104 "Customer Project Card"
                 Promoted = true;
                 PromotedCategory = Category4;
                 PromotedIsBig = true;
+                ApplicationArea = All; //GRALE02 - Add
 
                 trigger OnAction();
                 var
