@@ -4,6 +4,11 @@
 *   Documentation Section
 *       GRALE01 - 12/24/19 - Lina El Sadek, G.R. & Associates Inc.
 *               - Created codeunit.
+*
+*       GRALE02 - 05/13/20 - Lina El Sadek, G.R. & Associates Inc.
+*               - Fix bug where Template JOB kept getting creating without checking existing records with same Name,
+*               - resulting in Error.
+*               - Fix Timesheet Page ID was not being set when the Template was created.
 */
 codeunit 50102 CuXJobJnlManagement
 {
@@ -37,7 +42,17 @@ codeunit 50102 CuXJobJnlManagement
                             JobJnlTemplate.Description := Text003;
                         end;
                         JobJnlTemplate.Validate("Page ID");
-                        JobJnlTemplate.Insert;
+                        //GRALE02 - Add Start
+                        //This line is important, otherwise the code will always execute this Case option.
+                        JobJnlTemplate.Validate("Timesheet Page ID", PageID);
+                        //GRALE02 - Add End
+
+                        //GRALE02 - Change Start
+                        //Added check to see if the record is already there, then simply modify it. Otherwise it was generating
+                        //an exception. Especially when we were not setting TimeSheet Page ID
+                        if not JobJnlTemplate.Insert then
+                            JobJnlTemplate.Modify;
+                        //GRALE02 - Change End
                         Commit;
                     end;
                 1:
@@ -59,7 +74,12 @@ codeunit 50102 CuXJobJnlManagement
                             JobJnlTemplate.Description := Text003;
                         end;
                         JobJnlTemplate.Validate("Page ID");
-                        JobJnlTemplate.Insert;
+                        //GRALE02 - Change Start
+                        //Added check to see if the record is already there, then simply modify it. Otherwise it was generating
+                        //an exception. Especially when we were not setting TimeSheet Page ID
+                        if not JobJnlTemplate.Insert then
+                            JobJnlTemplate.Modify;
+                        //GRALE02 - Change End
                         Commit;
                     end;
                 1:
