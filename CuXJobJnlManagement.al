@@ -6,7 +6,7 @@
 *               - Created codeunit.
 *
 *       GRALE02 - 05/13/20 - Lina El Sadek, G.R. & Associates Inc.
-*               - Fix bug where Template JOB kept getting creating without checking existing records with same Name,
+*               - Fix bug where Template JOB kept getting created without checking existing records with same Name,
 *               - resulting in Error.
 *               - Fix Timesheet Page ID was not being set when the Template was created.
 */
@@ -45,6 +45,7 @@ codeunit 50102 CuXJobJnlManagement
                         //GRALE02 - Add Start
                         //This line is important, otherwise the code will always execute this Case option.
                         JobJnlTemplate.Validate("Timesheet Page ID", PageID);
+                        JobJnlTemplate.Validate(Recurring, RecurringJnl);
                         //GRALE02 - Add End
 
                         //GRALE02 - Change Start
