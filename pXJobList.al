@@ -2,6 +2,9 @@
 *   Documentation Section
 *       GRALE01 - 01/09/20 - Lina El Sadek, G.R. & Associates Inc.
 *               - Created pageextension to add Timesheet reference to page
+*
+*       GRALE02 - 05/13/20 - Lina El Sadek, G.R. & Associates Inc.
+*                - Added ApplicationArea to all actions, because they were not showing on the page
 */
 
 pageextension 50108 pXJobList extends "Job List"
@@ -12,6 +15,7 @@ pageextension 50108 pXJobList extends "Job List"
         {
             action(Timesheet)
             {
+                ApplicationArea = Jobs; //GRALE02 - Add
                 Image = Timesheet;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -26,6 +30,7 @@ pageextension 50108 pXJobList extends "Job List"
         {
             action("Job Task Worksheet")
             {
+                ApplicationArea = Jobs; //GRALE02 - Add
                 Image = Worksheet;
                 Promoted = true;
                 PromotedCategory = Category4;
@@ -45,12 +50,13 @@ pageextension 50108 pXJobList extends "Job List"
 
             action("Customer Project Card")
             {
+                ApplicationArea = Jobs; //GRALE02 - Add
                 Image = Card;
                 Promoted = true;
                 PromotedCategory = Category4;
                 PromotedIsBig = true;
                 RunObject = Page "Customer Project Card";
-                
+
             }
         }
 
@@ -58,6 +64,7 @@ pageextension 50108 pXJobList extends "Job List"
         {
             action("Resource Actuals per Job")
             {
+                ApplicationArea = Jobs; //GRALE02 - Add
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
