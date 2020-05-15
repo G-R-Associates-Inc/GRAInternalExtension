@@ -60,7 +60,7 @@ pageextension 50108 pXJobList extends "Job List"
             }
         }
 
-        addafter("Job - Suggested Billing")
+        addafter("Job Cost Suggested Billing")
         {
             action("Resource Actuals per Job")
             {

@@ -15,12 +15,6 @@ tableextension 50104 tXSalesInvoiceLine extends "Sales Invoice Line"
             FieldClass = Normal;
         }
 
-        field(50001; "Package Tracking No."; Text[30])
-        {
-            Caption = 'Package Tracking No.';
-            FieldClass = Normal;
-        }
-
         field(50002; "Kit Item"; Boolean)
         {
             Caption = 'Kit Item';

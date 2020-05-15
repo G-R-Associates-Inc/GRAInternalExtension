@@ -871,10 +871,10 @@ report 50100 "Sales Invoice"
                 TaxRegLabel := '';
                 if "Tax Area Code" <> '' then begin
                     TaxArea.Get("Tax Area Code");
-                    case TaxArea.Country of
-                        TaxArea.Country::US:
+                    case TaxArea."Country/Region" of
+                        TaxArea."Country/Region"::US:
                             TotalTaxLabel := Text005;
-                        TaxArea.Country::CA:
+                        TaxArea."Country/Region"::CA:
                             begin
                                 TotalTaxLabel := Text007;
                                 TaxRegNo := CompanyInformation."VAT Registration No.";
@@ -904,7 +904,7 @@ report 50100 "Sales Invoice"
                                 then begin
                                     BrkIdx := BrkIdx + 1;
                                     if BrkIdx > 1 then begin
-                                        if TaxArea.Country = TaxArea.Country::CA then
+                                        if TaxArea."Country/Region" = TaxArea."Country/Region"::CA then
                                             BreakdownTitle := Text006
                                         else
                                             BreakdownTitle := Text003;

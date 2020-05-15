@@ -2,16 +2,6 @@ pageextension 50113 pXCompanyInformation extends "Company Information"
 {
     layout
     {
-        addafter(GLN)
-        {
-            field("Federal ID No."; "Federal ID No.")
-            {
-                ApplicationArea = Basic, Suite;
-                Caption = 'Federal ID No.';
-                Importance = Standard;
-
-            }
-        }
         addafter(BankAccountPostingGroup)
         {
             field("US Country/Region Code"; "US Country/Region Code")

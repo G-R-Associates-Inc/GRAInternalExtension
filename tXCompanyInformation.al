@@ -26,17 +26,5 @@ tableextension 50112 tXCompanyInformation extends "Company Information"
             Caption = 'Mexico Country/Region Code';
             FieldClass = Normal;
         }
-
-        field(50003; "Provincial Tax Area Code"; Code[10])
-        {
-            Caption = 'Provincial Tax Area Code';
-            FieldClass = Normal;
-        }
-
-        field(50004; "Federal ID No."; Text[30])
-        {
-            Caption = 'Federal ID No.';
-            FieldClass = Normal;
-        }
     }
 }

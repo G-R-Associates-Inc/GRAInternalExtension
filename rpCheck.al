@@ -5,7 +5,7 @@
 *       TODO: Fix error on DimensionManagement 
 */
 
-report 50101 "Check (Stub/Check/Stub)"
+report 50101 "Check (Stub/Check/Stub) Custom"
 {
     Permissions = tabledata "Bank Account" = m;
     CaptionML = ENU = 'Check (Stub/Check/Stub)',
